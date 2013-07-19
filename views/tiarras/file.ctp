@@ -52,7 +52,7 @@ if(!empty($navi["linkTagsRaw"]["prev"]) || !empty($navi["linkTagsRaw"]["next"]))
 
 echo '<p style="text-align:center;">';
 if(!empty($navi["linkTagsRaw"]["prev"])){
-echo '<a href="'.$navi["linkTagsRaw"]["prev"]["url"].'" accesskey="*">'.__($navi["linkTagsRaw"]["prev"]["title"],true).'</a>'; 
+echo '<a href="'.$navi["linkTagsRaw"]["prev"]["url"].'" accesskey="*">'.__($navi["linkTagsRaw"]["prev"]["title"],true).'</a>';
 echo "&nbsp;";
 }
 if(!empty($navi["linkTagsRaw"]["next"])){

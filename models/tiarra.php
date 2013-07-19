@@ -7,10 +7,10 @@ class Tiarra extends AppModel{
 	function post($data){
 		try{
 		    $tiarra = new Net_Socket_Tiarra('socketname');
-		
+
 		    // PRIVMSG
 		    $tiarra->message('#makies@wide', "Hello!!");
-		
+
 		} catch (Net_Socket_Tiarra_Exception $e) {
 		    echo $e->getMessage();
 		}
@@ -24,10 +24,10 @@ class Tiarra extends AppModel{
 		    if ($dh = opendir($dir)) {
 		        while (($file = readdir($dh)) !== false) {
 				$file_path = $dir."".str_replace("@","\@",$file)."/";
-				//if(!in_array($file,array(".","..")) && is_dir($file_path) && is_readable($file_path) ){	
+				//if(!in_array($file,array(".","..")) && is_dir($file_path) && is_readable($file_path) ){
 				if(!in_array($file,array(".",".."))  ) {
 					$res[] = $file;
-				}		
+				}
 //				pr($file_path);
 		            #echo "filename: $file : filetype: " . filetype($dir . $file) . "\n";
 		        }
@@ -37,7 +37,7 @@ class Tiarra extends AppModel{
 			debug("dir is not dir.");
 		}
 		return $res;
-		
+
 	}
 
 
@@ -62,7 +62,7 @@ class Tiarra extends AppModel{
 #debug($res);
                 return $res;
 	}
-	
+
 	function getFileContent($array){
 		$res = array();
 		$filename = TIARRA_LOG_DIR."#".$array[0].DS.$array[1];
